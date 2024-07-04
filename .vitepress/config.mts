@@ -5,6 +5,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "Eskmo",
     base: "/",
+    locales: {
+        root: {
+            label: '中文',
+            lang: 'zh'
+        },
+    },
     description: "宇宙厲害的交易 API",
     head: [
         [
@@ -21,7 +27,6 @@ export default defineConfig({
             { text: 'API 文件', link: '/reference/index' },
             { text: '進階指南', link: '/advanced-guide/architecture/index' }
         ],
-
         sidebar: [
             {
                 text: '立即開始',
@@ -225,6 +230,36 @@ export default defineConfig({
         ],
         socialLinks: [
             { icon: 'github', link: 'https://github.com/ProjectEskmo/eskmo' }
-        ]
+        ],
+        search: {
+            provider: 'local',
+            options: {
+                locales: {
+                    root: {
+                        translations: {
+                            button: {
+                                buttonText: '搜尋',
+                                buttonAriaLabel: '搜尋'
+                            },
+                            modal: {
+                                displayDetails: '顯示完整列表',
+                                resetButtonTitle: '重新搜尋',
+                                backButtonTitle: '關閉搜尋',
+                                noResultsText: '沒有結果',
+                                footer: {
+                                    selectText: '選擇',
+                                    selectKeyAriaLabel: '輸入',
+                                    navigateText: '瀏覽',
+                                    navigateUpKeyAriaLabel: '上箭頭',
+                                    navigateDownKeyAriaLabel: '下箭頭',
+                                    closeText: '關閉',
+                                    closeKeyAriaLabel: 'ESC'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 })
