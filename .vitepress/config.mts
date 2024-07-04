@@ -11,7 +11,7 @@ export default defineConfig({
             lang: 'zh'
         },
     },
-    description: "宇宙厲害的交易 API",
+    description: "金融量化交易 API ｜ 提供開發者、交易員與金融專家，輕鬆建立交易程式",
     head: [
         [
             'link', { rel: 'icon', href: '/favicon.ico' }

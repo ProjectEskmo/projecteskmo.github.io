@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Eskmo"
-  text: "台灣量化交易 API"
+  text: "金融量化交易 API" # 改 text 和 tagline 後, 記得去改 config.mts 的 description
   tagline: 提供開發者、交易員與金融專家，輕鬆建立交易程式
   image:
     light: /assets/logo-light.png
