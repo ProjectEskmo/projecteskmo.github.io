@@ -22,10 +22,17 @@ export default defineConfig({
         logo: '/assets/eskmo-logo.jpg',
         siteTitle: 'Eskmo',
         nav: [
-            { text: '立即開始', link: '/getting-started/login' },
+            // { text: '立即開始', link: '/getting-started/login' },
             { text: '使用手冊', link: '/user-manual/prerequisites/index' },
             { text: 'API 文件', link: '/reference/index' },
-            { text: '進階指南', link: '/advanced-guide/architecture/index' }
+            { text: '進階指南', link: '/advanced-guide/architecture/index' },
+            {
+                text: '0.0.1',
+                items: [
+                    { text: '更新日誌', link: '/overview/changelog' },
+                    { text: '版本說明', link: '/overview/version' },
+                ]
+            }
         ],
         sidebar: [
             {
