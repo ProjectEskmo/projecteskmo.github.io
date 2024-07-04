@@ -14,7 +14,7 @@ outline: deep
 @eskmo.start
 def main():
     Logger.show = True
-    user: User = eskmo.login(userId="F128052937", password="apple790831", tag="me")
+    user: User = eskmo.login(userId="A123456789", password="*************", tag="me")
 
     stock: Stock = eskmo.stocks["2888"]
     order = stock.order(cst.ORDER.ACTION.BUY, 7.5, 1).send(user.id)

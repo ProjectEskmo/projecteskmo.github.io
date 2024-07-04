@@ -12,7 +12,7 @@ outline: deep
 @eskmo.start
 def main():
     Logger.show = True
-    user = eskmo.login(userId="F128052937", password="*********")
+    user = eskmo.login(userId="A123456789", password="*********")
 
     print(f"Balance: {user.account.balance}") 
     print(f"Summary: {user.account.balance.summary}")
@@ -26,7 +26,7 @@ def main():
 @eskmo.start
 def main():
     Logger.show = True
-    user = eskmo.login(userId="F128052937", password="apple790831")
+    user = eskmo.login(userId="A123456789", password="*************")
 
     account.balance.update(type="summary", pnl="unrealized")
     print(f"Summary: {account.balance.summary.unrealized}")

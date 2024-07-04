@@ -40,7 +40,7 @@ def onFatalLog(data):
 
 @eskmo.start
 def main():
-    eskmo.login(userId="F128052937", password="**********", tag="me")
+    eskmo.login(userId="A123456789", password="**********", tag="me")
 
 if __name__ == "__main__":
     main()    

@@ -80,7 +80,7 @@ if __name__ == "__main__":
 @eskmo.start
 def main():
     Logger.show = True
-    user = eskmo.login(userId="F128052937", password="apple790831")
+    user = eskmo.login(userId="A123456789", password="*************")
 
     account = user.account # [!code focus]
     print(account.id) # [!code focus]

@@ -10,7 +10,7 @@ outline: deep
 @eskmo.start
 def main():
     Logger.show = True
-    user: User = eskmo.login(userId="F128052937", password="********")
+    user: User = eskmo.login(userId="A123456789", password="********")
 
     stock: Stock = eskmo.stocks["2888"]
     smartOrder = stock.smartOrder.mit(cst.ORDER.ACTION.BUY, 8, 1, 8).send(user.id) 

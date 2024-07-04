@@ -14,7 +14,7 @@ cst = eskmo.const
 @eskmo.start
 def main():
     Logger.show = True
-    user: User = eskmo.login(userId="F128052937", password="**********")
+    user: User = eskmo.login(userId="A123456789", password="**********")
 
     stock: Stock = eskmo.stocks["2888"]
     smartOrder = stock.smartOrder.mit(cst.ORDER.ACTION.BUY, 7.5, 1, 7.5).send(user.id)

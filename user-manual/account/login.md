@@ -41,7 +41,7 @@ from eskmo.api import api as eskmo
 @eskmo.start
 def main():
     tag1 = "用戶 1"
-    eskmo.login(userId="F128052937", password="apple790831", tag=tag1)
+    eskmo.login(userId="A123456789", password="*************", tag=tag1)
   
     user1 = eskmo.users[tag1]　 # [!code focus]
     print(user1)　　　　　　　　 # [!code focus]
