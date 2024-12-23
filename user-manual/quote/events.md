@@ -8,11 +8,11 @@ outline: deep
 
 下表為即時行情相關事件：
 
-| 事件         | 註冊方式                               | 回傳物件                                              |
-|--------------|----------------------------------------|-------------------------------------------------------|
-| 價格變動     | [@eskmo.event.quote.price_changed](/)  | [QuotePriceChangedResult](#QuotePriceChangedResult)   |
-| 最佳一檔變動 | [@eskmo.event.quote.bidask_changed](/) | [QuoteBidAskChangedResult](#QuoteBidAskChangedResult) |
-| 成交變動     | [@eskmo.event.quote.tick_changed](/)   | [QuoteTickChangedResult](#QuoteTickChangedResult)     |
+| 事件         | 註冊方式                                                         | 回傳物件                                              |
+|--------------|------------------------------------------------------------------|-------------------------------------------------------|
+| 價格變動     | [@api.event.quote.price_changed](/user-manual/quote/live/quote)  | [QuotePriceChangedResult](#QuotePriceChangedResult)   |
+| 最佳一檔變動 | [@api.event.quote.bidask_changed](/user-manual/quote/live/quote) | [QuoteBidAskChangedResult](#QuoteBidAskChangedResult) |
+| 成交變動     | [@api.event.quote.tick_changed](/user-manual/quote/live/quote)   | [QuoteTickChangedResult](#QuoteTickChangedResult)     |
 
 > [!INFO]
 >
@@ -28,14 +28,14 @@ outline: deep
 
 訂閱與解訂行情事件如下：
 
-| 事件         | 註冊方式                                    | 回傳物件                                              |
-|--------------|---------------------------------------------|-------------------------------------------------------|
-| 開始訂閱行情 | [@eskmo.event.quote.subscribe_start](/)     | [SubscribeStartResult](#SubscribeStartResult)         |
-| 訂閱行情成功 | [@eskmo.event.quote.subscribe_success](/)   | [SubscribeSuccessResult](#SubscribeSuccessResult)     |
-| 訂閱行情失敗 | [@eskmo.event.quote.subscribe_fail](/)      | [SubscribeFailResult](#SubscribeFailResult)           |
-| 開始解訂行情 | [@eskmo.event.quote.unsubscribe_start](/)   | [UnsubscribeStartResult](#UnsubscribeStartResult)     |
-| 解訂行情成功 | [@eskmo.event.quote.unsubscribe_success](/) | [UnsubscribeSuccessResult](#UnsubscribeSuccessResult) |
-| 解訂行情失敗 | [@eskmo.event.quote.unsubscribe_fail](/)    | [UnsubscribeFailResult](#UnsubscribeFailResult)       |
+| 事件         | 註冊方式                                                              | 回傳物件                                              |
+|--------------|-----------------------------------------------------------------------|-------------------------------------------------------|
+| 開始訂閱行情 | [@api.event.quote.subscribe_start](/user-manual/quote/live/quote)     | [SubscribeStartResult](#SubscribeStartResult)         |
+| 訂閱行情成功 | [@api.event.quote.subscribe_success](/user-manual/quote/live/quote)   | [SubscribeSuccessResult](#SubscribeSuccessResult)     |
+| 訂閱行情失敗 | [@api.event.quote.subscribe_fail](/user-manual/quote/live/quote)      | [SubscribeFailResult](#SubscribeFailResult)           |
+| 開始解訂行情 | [@api.event.quote.unsubscribe_start](/user-manual/quote/live/quote)   | [UnsubscribeStartResult](#UnsubscribeStartResult)     |
+| 解訂行情成功 | [@api.event.quote.unsubscribe_success](/user-manual/quote/live/quote) | [UnsubscribeSuccessResult](#UnsubscribeSuccessResult) |
+| 解訂行情失敗 | [@api.event.quote.unsubscribe_fail](/user-manual/quote/live/quote)    | [UnsubscribeFailResult](#UnsubscribeFailResult)       |
 
 ## QuotePriceChangedResult
 
@@ -46,7 +46,7 @@ outline: deep
 |      |      |      |      |
 
 ```python
-@eskmo.event.quote.price_changed
+@api.event.quote.price_changed
 def onPriceChanged(data):
     print("即時行情價格變動: ", data)
 ```
@@ -60,7 +60,7 @@ def onPriceChanged(data):
 |      |      |      |      |
 
 ```python
-@eskmo.event.quote.tick_changed
+@api.event.quote.tick_changed
 def onTickChanged(data):
     print("即時行情成交變動: ", data)
 ```
@@ -76,7 +76,7 @@ def onTickChanged(data):
 |      |      |      |      |
 
 ```python
-@eskmo.event.quote.bidask_changed
+@api.event.quote.bidask_changed
 def onBidAskChanged(data):
     print("即時行情最佳一檔變動: ", data)
 ```

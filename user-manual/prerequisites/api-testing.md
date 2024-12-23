@@ -7,12 +7,13 @@ outline: deep
 藉由執行 API 測試來確認是否正確安裝了相應套件
 
 ```python
-from eskmo.api import api as eskmo
+from eskmo import api
+api.logger.show = False
 
-@eskmo.start
+@api.start
 def main():
 
-    result = eskmo.api_testing()
+    result = api.testing()
     print(result)
     # {'檢測項目': [('啟動多進程', '成功'),
     #              ('依賴套件初始化', '成功'),

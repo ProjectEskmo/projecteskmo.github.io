@@ -16,10 +16,7 @@ hero:
       link: /getting-started/login
     - theme: alt
       text: 什麼是 Eskmo ?
-      link: /advanced-guide/architecture/index
-    - theme: alt
-      text: API 文件
-      link: /reference/index
+      link: /user-manual/index # /advanced-guide/architecture/index
 
 features:
   - icon: 😊

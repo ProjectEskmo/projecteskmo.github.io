@@ -1,10 +1,13 @@
 ---
 outline: deep
+next:
+  text: '最新回報'
+  link: '/user-manual/reply/latest'
 ---
 
 # 回報
 
-委託的最新狀態更新會觸發最新回報，透過回報掌握所有委託最新資訊
+下單之後就會觸發 API 回傳最新回報，透過回報掌握所有委託最新資訊
 
 Eskmo 關於回報，包含：
 

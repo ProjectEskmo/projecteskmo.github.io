@@ -10,13 +10,13 @@ outline: deep
 用戶登入後，透過帳戶列表取得對應帳戶，並對帳戶進行操作
 
 ```python
-from eskmo.api import api as eskmo
+from eskmo import api
 
-@eskmo.start
+api.logger.show = True
+
+@api.start
 def main():
-    eskmo.logger.show = True
-
-    user = eskmo.login(userId="A123456789", password="************") # [!code focus]
+    user = api.login(userId="A123456789", password="************") # [!code focus]
     accounts = user.accounts  # [!code focus]
     print(accounts)           # [!code focus]
     
@@ -31,14 +31,14 @@ if __name__ == "__main__":
 透過 `set_main_account` 可修改為其他帳戶（例如期貨帳戶）
 
 ```python
-from eskmo.api import api as eskmo
+from eskmo import api
 
-@eskmo.start
+api.logger.show = True
+
+@api.start
 def main():
-    eskmo.logger.show = True
-
     # 預設帳戶                                                        # [!code focus]
-    user = eskmo.login(userId="A123456789", password="************") # [!code focus]
+    user = api.login(userId="A123456789", password="************") # [!code focus]
     account = user.account                                           # [!code focus]
     print(account)                                                   # [!code focus]
 
@@ -60,13 +60,13 @@ if __name__ == "__main__":
 與下單有關的操作可能會需要帳戶 ID，透過用戶可取得所有帳戶 ID：
 
 ```python
-from eskmo.api import api as eskmo
+from eskmo import api
 
-@eskmo.start
+api.logger.show = True
+
+@api.start
 def main():
-    eskmo.logger.show = True
-                                                     
-    user = eskmo.login(userId="A123456789", password="************") # [!code focus]
+    user = api.login(userId="A123456789", password="************") # [!code focus]
     accountIds = user.get_account_ids()                              # [!code focus]
     print(accountIds)                                                # [!code focus]
     
@@ -77,10 +77,11 @@ if __name__ == "__main__":
 或是透過帳戶物件 `account.id` 取得：
 
 ```python
-@eskmo.start
+api.logger.show = True
+
+@api.start
 def main():
-    Logger.show = True
-    user = eskmo.login(userId="A123456789", password="*************")
+    user = api.login(userId="A123456789", password="*************")
 
     account = user.account # [!code focus]
     print(account.id) # [!code focus]

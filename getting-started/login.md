@@ -6,23 +6,25 @@ outline: deep
 
 ## 準備
 
-請參考 [環境設置](/) 進行券商開戶、簽署 API 同意書、安裝 Skcom API 與憑證
+請參考 [安裝流程](/user-manual/prerequisites/installation) 並完成 (1) 券商開戶 (2) 簽署 API 同意書 (3) 安裝憑證
 
 ```bash
 pip install eskmo
+eskmo install skcom
 ```
 
 ## 登入
 
 ```python
-from eskom.api import api as eskmo
+from eskmo import api
 
-@eskmo.start
+api.logger.show = True
+
+@api.start
 def main():
-    eskmo.logger.show = True
-    eskmo.login(userId="A123456789", password="**********")
+    api.login(userId="A123456789", password="**********")
 
 if __name__ == "__main__":
     main()    
 ```
-
+請將 `userId, password` 替換成您的身分證字號與密碼（與策略王登入帳號密碼相同）

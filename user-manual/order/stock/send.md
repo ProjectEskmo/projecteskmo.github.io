@@ -11,12 +11,13 @@ outline: deep
 在還沒有 send 之前, 你會拿到 `PendingOrder`, Send 出去後會拿到的是 `Order`
 
 ```python
-@eskmo.start
-def main():
-    Logger.show = True
-    user: User = eskmo.login(userId="A123456789", password="*************", tag="me")
+api.logger.show = True
 
-    stock: Stock = eskmo.stocks["2888"]
+@api.start
+def main():
+    user: User = api.login(userId="A123456789", password="*************", tag="me")
+
+    stock: Stock = api.stocks["2888"]
     order = stock.order(cst.ORDER.ACTION.BUY, 7.5, 1).send(user.id)
     
     print(f"order: {order}")

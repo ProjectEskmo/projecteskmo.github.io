@@ -4,21 +4,24 @@ outline: deep
 
 # 日誌
 
-Eskmo 提供不同等級的運行日誌可以讀取
+日誌 (Logging) 指的是程式在運行時的各種通知訊息，蒐集保存以便疑難排解
+
+Eskmo 提供不同等級的運行日誌可以讀寫，包含 `info`, `warning`, `error` 
+
+可以根據使用需求設置需要顯示和保存多少級別以上的日誌訊息
 
 ## 顯示日誌
 
-透過 `logger.show` 來控制是否要啟用日誌
+透過 `api.logger.show` 來控制是否要顯示日誌
 
 ```python
-from eskmo.api import api as eskmo
+from eskmo import api
 
-Logger = eskmo.logger
+api.logger.show = True
 
-@eskmo.start
+@api.start
 def main():
-    Logger.show = True
-    eskmo.login(userId="A123456789", password="**************", tag="me")
+    api.login(userId="A123456789", password="**************", tag="me")
 
 if __name__ == "__main__":
     main()
@@ -28,19 +31,16 @@ if __name__ == "__main__":
 
 使用者也能使用日誌進行不同級別的日誌記錄
 
-```python{9-12}
-from eskmo.api import api as eskmo
+```python{7-9}
+from eskmo import api
 
-Logger = eskmo.logger
-
-@eskmo.start
+@api.start
 def main():
-    eskmo.login(userId="A123456789", password="**************", tag="me")
+    api.login(userId="A123456789", password="**************", tag="me")
     
-    Logger.debug("Debug!")
-    Logger.info("Info!")
-    Logger.warning("Warning!")
-    Logger.error("Error!")
+    api.logger.info("Info!")
+    api.logger.warning("Warning!")
+    api.logger.error("Error!")
 
 if __name__ == "__main__":
     main()

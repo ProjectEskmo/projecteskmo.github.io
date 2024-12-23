@@ -1,15 +1,15 @@
 ---
 outline: deep
 next:
-  text: '委託查詢'
-  link: '/user-manual/reply/query'
-  # text: '最新智慧單回報'
-  # link: '/user-manual/reply/latest/smart-order'
+  text: '最新智慧單回報'
+  link: '/user-manual/reply/latest/smart-order'
 ---
 
-# 最新委託回報
+# 最新智慧單回報
 
-在送出委託之後，可透過委託物件查詢回報，也可以透過註冊事件捕捉最新回報
+與一般委託相同，在送出智慧單之後，可透過委託物件查詢回報，也可以透過註冊事件捕捉最新回報
+
+根據不同的智慧單類別，進行相應的查詢
 
 ## 透過委託物件，查詢最新回報
 
@@ -65,7 +65,7 @@ from eskmo import OrderNotifyResult
 api.logger.show = True
 
 @api.event.order.notify
-def onOrderNotify(result: OrderNotifyResult):
+def onOrderNotify(result):
     print(f"最新回報: {result}")
 
 @api.start
