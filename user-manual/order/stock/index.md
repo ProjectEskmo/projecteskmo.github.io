@@ -8,3 +8,11 @@ next:
 # 證券委託
 
 證券委託操作包含 [送出](send)、[修改](edit) 和 [刪除](cancel) 委託
+
+除此之外，證券也能使用以下智慧單：
+- [觸價單 MIT](/user-manual/order/stock/mit/index)
+- [二擇一 OCO](#)
+- <small>現沖單 DayTrade (Comming Soon)</small>
+- <small>出清單 ClearOut (Comming Soon)</small>
+- <small>自組單 CB (Comming Soon)</small>
+- <small>多次IOC MIOC (Comming Soon)</small>

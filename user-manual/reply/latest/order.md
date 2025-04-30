@@ -1,10 +1,8 @@
 ---
 outline: deep
 next:
-  text: '委託查詢'
-  link: '/user-manual/reply/query'
-  # text: '最新智慧單回報'
-  # link: '/user-manual/reply/latest/smart-order'
+  text: '最新智慧單回報'
+  link: '/user-manual/reply/latest/smart-order'
 ---
 
 # 最新委託回報

@@ -25,3 +25,10 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+
+> [!NOTE]
+> 如果您在編輯器 (如 VSCode, PyCharm) 使用預設的執行功能 (例如 `Run`, `Debug`)
+> 
+> 並遇到中文顯示亂碼問題，可改由在命令行介面 (CMD) 執行 `python example.y` 來改善
+> 

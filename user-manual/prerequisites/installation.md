@@ -11,6 +11,10 @@ outline: deep
 1. 完成開戶作業，若需要期貨功能則需要再多開期貨帳戶
 2. 簽署 API 同意書
 
+> [!WARNING]
+>
+> 簽署 API 同意書需要隔天才生效，在當天交易日 API 仍然無法使用
+
 ## 安裝憑證
 
 Eskmo 預設會自動安裝群益 API，您只需要安裝憑證即可。
@@ -70,3 +74,24 @@ eskmo install skcom
 
 在該頁面下方也有 **Python 使用說明**, **API 元件使用說明** 可以下載閱讀
 
+<br/>
+
+### 若 SKCOM 安裝失敗 - 檢查是否安裝 VC++ 2010
+
+較舊的 Windows 版本可能無法順利安裝 SKCOM，因為缺少 `Microsoft Visual C++ 2010 x64` 
+
+請至 [Microsoft Visual C++ 可轉散發套件的最新支援下載項目](https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+
+移動到 `Visual Studio 2010 (VC++ 10.0) SP1 (不再支援)` 
+
+下載 `x64` 右邊的 `vcredist_x64.exe` 來使用
+
+![](/assets/images/install-vc2010.png)
+
+## 安裝驗證小工具並驗證 (群益 API 2.13.53 起)
+
+從 2.13.53 開始，群益 API 使用需要先使用驗證小工具驗證，請至官網 [API申請說明](https://www.capital.com.tw/web/#/download/ApiTrading/ApiTradinginfo)
+
+依照官網流程進行安裝與驗證，驗證後方可使用群益 SKCOM API
+
+![](/assets/images/install-verify-program.png)

@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 一般委託查詢
+# 委託查詢
 
 與查詢最新回報相同，就是在對應位置後綴 `.reply` 改成 `.replys` 進行查詢動作
 
@@ -44,7 +44,7 @@ def main():
 
     orders: StockOrders = stock.orders(user.id)
     for order in orders:
-        for reply in replys:
+        for reply in order.replys:
             print(reply)    
 
 ```

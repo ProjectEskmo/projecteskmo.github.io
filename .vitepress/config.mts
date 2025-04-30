@@ -27,7 +27,7 @@ export default defineConfig({
             // { text: 'API 文件', link: '/reference/index' },
             // { text: '進階指南', link: '/advanced-guide/architecture/index' },
             {
-                text: '0.0.4',
+                text: '0.0.6',
                 items: [
                     { text: '更新日誌', link: '/overview/changelog' },
                     { text: '版本說明', link: '/overview/version' },
@@ -115,9 +115,26 @@ export default defineConfig({
                                     { text: '送出委託', link: '/user-manual/order/stock/send' },
                                     { text: '修改委託', link: '/user-manual/order/stock/edit' },
                                     { text: '刪除委託', link: '/user-manual/order/stock/cancel' },
+                                    { text: '委託事件', link: '/user-manual/order/stock/events' },
                                 ]
                             },
-                            { text: '委託事件', link: '/user-manual/order/events' },
+                            {
+                                text: '證券 MIT',
+                                link: '/user-manual/order/stock/mit/index',
+                                items: [
+                                    { text: 'MIT 送單', link: '/user-manual/order/stock/mit/send' },
+                                    { text: 'MIT 刪單', link: '/user-manual/order/stock/mit/cancel' },
+                                    { text: 'MIT 事件', link: '/user-manual/order/stock/mit/events' },
+                                ]
+                            },
+                            {
+                                text: '證券 OCO',
+                                link: '/user-manual/order/stock/oco/index'
+                            },
+                            {
+                                text: '現股當沖單',
+                                link: '/user-manual/order/stock/daytrade/index'
+                            },
                         ]
                     },
                     // {
@@ -146,15 +163,15 @@ export default defineConfig({
                                 link: '/user-manual/reply/latest/index',
                                 items: [
                                     { text: '最新委託回報', link: '/user-manual/reply/latest/order' },
-                                    // { text: '最新智慧單回報', link: '/user-manual/reply/latest/smart-order' },
+                                    { text: '最新智慧單回報', link: '/user-manual/reply/latest/smart-order' },
                                 ]
                             },
                             {
                                 text: '委託查詢',
                                 link: '/user-manual/reply/query/index',
                                 items: [
-                                    { text: '一般委託查詢', link: '/user-manual/reply/query/order' },
-                                    // { text: '智慧單查詢', link: '/user-manual/reply/query/smart-order' },
+                                    { text: '歷史委託查詢', link: '/user-manual/reply/query/order' },
+                                    { text: '歷史智慧單查詢', link: '/user-manual/reply/query/smart-order' },
                                 ]
                             },
                             { text: '回報事件', link: '/user-manual/reply/events' },
